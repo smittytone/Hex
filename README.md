@@ -1,6 +1,6 @@
 # Hex 1.1.0 #
 
-This script reads in a file and outputs it as a hex string formatted  for use in, for example, Electric Imp Squirrel applications.
+This script reads in a file and outputs it as a hex string formatted for use in, for example, Electric Imp Squirrel applications.
 
 ## Release Notes ##
 
