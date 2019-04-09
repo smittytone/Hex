@@ -1,9 +1,11 @@
-# Hex 1.1.0 #
+# Hex 1.1.1 #
 
 This script reads in a file and outputs it as a hex string formatted for use in, for example, Electric Imp Squirrel applications.
 
 ## Release Notes ##
 
+- 1.1.1 &mdash; *09 April 2019*
+    - Code styling, optimization improvements
 - 1.1.0 &mdash; *22 March 2019*
     - Initial public release
 
