@@ -56,10 +56,8 @@ def process_file(path):
     """
     Process the specified file to generate the hex output.
 
-    Parameters
-    ----------
-    path : str
-        The path of the file to process
+    Args:
+        path (str): The path of the file to process
     """
 
     file_bytes = []
@@ -171,12 +169,9 @@ def update_ignored(extensions, should_add):
     Add/remove one or more file extensions to/from the list of those to be ignored during file
     processing.
 
-    Parameters
-    ----------
-    extensions : str or list
-        The extensions to be added/removed from the exclusion list
-    shouldAdd : boolean
-        Should the extensions be added or removed?
+    Args:
+        extensions (str/list): The extensions to be added/removed from the exclusion list
+        should_add (bool):     Should the extensions be added or removed?
     """
 
     # Generate a full list of extensions to remove
@@ -216,27 +211,23 @@ def update_ignored(extensions, should_add):
     check_prefs()
 
 
-def check_extension(file):
+def check_extension(file_path):
     """
     Check whether a specified file has an extension that is excluded.
 
-    Parameters
-    ----------
-    file : str
-        The path of the file
+    Args:
+        file_path (str): The path of the file
 
-    Returns
-    -------
-    bool
-        Whether the file should be processed (True) or ignored (False)
+    Returns:
+        bool: Whether the file should be processed (True) or ignored (False)
     """
 
     extension = ""
 
     # Reject hidden files
-    if file[0] == ".": return False
+    if file_path[0] == ".": return False
 
-    parts = file.split(".")
+    parts = file_path.split(".")
     if len(parts) > 1:
         extension = parts[len(parts) - 1]
     else:
@@ -250,12 +241,9 @@ def int_to_hex_str(value, length=2):
     """
     Convert an integer to a hex string.
 
-    Parameters
-    ----------
-    value : int
-        The value to be converted
-    length : bool
-        The number of characters of the output string. Default: 2
+    Args:
+        value  (int): The value to be converted
+        length (int): The number of characters of the output string. Default: 2
     """
 
     # Make sure 'length' is of even length
